@@ -6,22 +6,25 @@
 </head>
 <body>
 <table>
-  <tr>
-    <th>id</th>
-    <th>Name</th>
-    <th>Size</th>
-    <th>Address</th>
-  </tr>
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Size</th>
+        <th>Address</th>
+    </tr>
 
- <tr th:each="company: ${companies}">
-   <td th:text="${company.id}"></td>
-   <td th:text="${company.name}"></td>
-   <td th:text="${company.size}"></td>
-   <td th:text="${company.address}"></td>
-
- </tr>
+    <tr th:each="company: ${companies}">
+        <td th:text="${company.id}"></td>
+        <td th:text="${company.name}"></td>
+        <td th:text="${company.size}"></td>
+        <td th:text="${company.address}"></td>
+        <td><a th:href="@{/company/delete(id=${company.id})}">
+            <input type="submit" value="DELETE">
+        </a>
+        </td>
+    </tr>
 </table>
-
-
+<a href="/company/add">
+    <input type="submit" value="Add Company"></a>
 </body>
 </html>
