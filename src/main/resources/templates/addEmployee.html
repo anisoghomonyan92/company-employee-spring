@@ -5,6 +5,8 @@
     <title>Add Employee</title>
 </head>
 <body>
+<th:block th:insert="/fragments/fragment.html::controllerAdvice"></th:block>
+<th:block th:insert="/fragments/fragment.html::Login"></th:block>
 Add Employee
 <form action="/employee/add" method="post" enctype="multipart/form-data"><br>
     <input type="text" name="name" placeholder="Please input name"><br>

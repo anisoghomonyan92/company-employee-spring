@@ -1,4 +1,5 @@
 package com.example.companyemployeespring.controller;
+
 import com.example.companyemployeespring.entity.Company;
 import com.example.companyemployeespring.entity.Employee;
 import com.example.companyemployeespring.repository.CompanyRepository;
@@ -11,12 +12,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-import java.util.Optional;
+
 
 @Controller
 public class EmployeeController {
@@ -65,7 +67,6 @@ public class EmployeeController {
         return IOUtils.toByteArray(inputStream);
 
     }
-
     @GetMapping(value = "/employee/delete")
     public String delete(@RequestParam("id") int id) {
         employeeRepository.deleteById(id);

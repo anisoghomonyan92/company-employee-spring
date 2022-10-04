@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/" lang="en">
+
+<body>
+<th:block th:fragment="controllerAdvice" th:if="${currentUser != null}">
+    <img th:if="${currentUser.profilePic !=null}" th:src="@{/users/getImage(fileName=${currentUser.profilePic})}">
+    <img th:if="${currentUser.profilePic ==null}" src="/images/aaa.jpg">
+
+    <a href="/logout">LOGOUT</a>
+
+</th:block>
+
+<th:block th:fragment="Login" th:if="${currentUser==null}">
+    <a href="/login">LOGIN</a>
+</th:block>
+
+</body>
+</html>

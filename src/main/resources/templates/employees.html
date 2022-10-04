@@ -5,6 +5,8 @@
     <title>Employees Page</title>
 </head>
 <body>
+<th:block th:insert="/fragments/fragment.html::controllerAdvice"></th:block>
+<th:block th:insert="/fragments/fragment.html::Login"></th:block>
 <table>
     <tr>
         <th>id</th>
@@ -37,7 +39,6 @@
         </a>
         </td>
     </tr>
-
 </table>
 
 <a href="/employee/add">
@@ -48,6 +49,5 @@
         border: 1px solid black;
     }
 </style>
-
 </body>
 </html>

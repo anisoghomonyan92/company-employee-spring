@@ -7,25 +7,24 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+
+@Builder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
-@Table(name = "employee")
-public class Employee {
+@Table(name = "user")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String surname;
     private String email;
-    private String phoneNumber;
-    private int salary;
-    @Enumerated(value = EnumType.STRING)
-    private PositionType position;
-    @ManyToOne
-    private Company company;
+    private String address;
     private String profilePic;
+    private String password;
+    @Enumerated(value = EnumType.STRING)
+    private Role Role;
 
 }

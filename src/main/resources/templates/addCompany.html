@@ -5,6 +5,8 @@
     <title>Add Company</title>
 </head>
 <body>
+<th:block th:insert="/fragments/fragment.html::controllerAdvice"></th:block>
+<th:block th:insert="/fragments/fragment.html::Login"></th:block>
 Add Company
 <form action="/company/add" method="post"><br>
     <input type="text" name="name" placeholder="Please input name"> <br>
